@@ -1,11 +1,13 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
+
 
 const SignUp = () => {
   return (
     <>
-      <div className=" left-[50%] absolute translate-x-[-50%]">
+      <div className=" ">
         <Formik
           initialValues={{
             fullName: "",
@@ -14,7 +16,6 @@ const SignUp = () => {
             password: "",
           }}
           validationSchema={Yup.object({
-            
             email: Yup.string()
               .email("Invalid email address")
               .required("Required"),
@@ -32,37 +33,41 @@ const SignUp = () => {
             }, 400);
           }}
         >
-          <div className="w-96 p-4 bg-white bg-opacity-75 backdrop-blur-lg rounded-md shadow-md">
+          <div className="w-96 max-md:w-72 p-4 bg-white bg-opacity-75 lg:backdrop-blur-lg rounded-md shadow-md">
             <Form className="flex flex-col gap-4">
               <label htmlFor="fullName">Full Name</label>
               <Field
                 name="fullName"
                 type="text"
-                className="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                className="px-4 py-2 max-md:py-1 border rounded-md focus:outline-none focus:border-blue-500"
               />
 
               <label htmlFor="userName">User Name</label>
               <Field
                 name="userName"
                 type="text"
-                className="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                className="px-4 py-2 max-md:py-1 border rounded-md focus:outline-none focus:border-blue-500"
               />
 
               <label htmlFor="email">Email Address</label>
               <Field
                 name="email"
                 type="email"
-                className="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                className="px-4 py-2 max-md:py-1 border rounded-md focus:outline-none focus:border-blue-500"
               />
-              <ErrorMessage name='email'/>
+              <ErrorMessage name="email" />
 
               <label htmlFor="password">Password</label>
               <Field
                 name="password"
                 type="password"
-                className="px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                className="px-4 py-2 max-md:py-1 border rounded-md focus:outline-none focus:border-blue-500"
               />
-              <ErrorMessage name='password'/>
+              <ErrorMessage name="password" />
+
+              <p>
+                Already have an account? <Link to="/Login">Click Here</Link>{" "}
+              </p>
 
               <button
                 type="submit"
