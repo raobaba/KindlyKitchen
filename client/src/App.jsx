@@ -1,9 +1,9 @@
+import React from "react"
+import MainAuth from "./components/Auth/MainAuth"
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <MainAuth/>
     </>
   )
 }
