@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.form-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fadeInRight {
+  transform: translateX(0);
+}
+
+.fadeOutRight {
+    opacity: 0;
+  transform: translateX(100%);
+  
+}

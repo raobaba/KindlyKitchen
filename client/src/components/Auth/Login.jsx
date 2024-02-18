@@ -3,7 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 const Login = () => {
   return (
-    <div className=" flex items-center justify-center h-screen">
+    <div className=" ml-[50%] absolute translate-x-[-50%]">
       <Formik
         initialValues={{ userName: "", password: "" }}
         onSubmit={(values, { setSubmitting, resetForm }) => {

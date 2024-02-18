@@ -5,7 +5,7 @@ import * as Yup from "yup";
 const SignUp = () => {
   return (
     <>
-      <div className=" flex items-center justify-center h-screen">
+      <div className=" left-[50%] absolute translate-x-[-50%]">
         <Formik
           initialValues={{
             fullName: "",
