@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import * as Yup from "yup";
 const Login = () => {
   return (
-    <div className=" ">
+    <div className="">
       <Formik
         initialValues={{ userName: "", password: "" }}
         onSubmit={(values, { setSubmitting, resetForm }) => {
