@@ -3,7 +3,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import bg from "../../assets/e.jpg";
 import "../../index.css";
-import Routing from "../Router/Routing";
+import Routing from "../routing/Routing";
 import { Link } from "react-router-dom";
 import "./Auth.css";
 
